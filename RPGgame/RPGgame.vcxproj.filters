@@ -13,10 +13,222 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Файлы заголовков\Characters">
+      <UniqueIdentifier>{8886e515-9ff6-420e-8efd-baf9c923efb7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Skills">
+      <UniqueIdentifier>{767fbdf3-2031-4d74-b195-d28e1001a66d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Enhancements">
+      <UniqueIdentifier>{5842c64a-4ea7-4cb8-9e2f-85f5fa84dae3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Artifacts">
+      <UniqueIdentifier>{834be3b3-2f05-434f-ae3f-11281d8ca10a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Characters\Hero">
+      <UniqueIdentifier>{97157f0c-20e7-45cb-9e17-2ebacd15ef85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Attack">
+      <UniqueIdentifier>{6a4d153b-e587-4b5f-9f8f-f6b92da7759b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\StaticData">
+      <UniqueIdentifier>{0c17df88-57ef-4019-9913-cba4f4a83f03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\functions">
+      <UniqueIdentifier>{b5917aa1-94be-42a1-aed5-2aaf383ebb22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Game">
+      <UniqueIdentifier>{6a59e098-445c-4927-9334-1ba377e9c0f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Game\Battle">
+      <UniqueIdentifier>{11b15ca8-9f41-42f3-84d1-da4bca41d1bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Characters\Allies">
+      <UniqueIdentifier>{ddaf3764-1234-45e5-b0dc-65b53a30e60e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="RPGgame.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="Character.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Inventory.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Hero.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Group.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Attack.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Resistances.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="WeaponSlot.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Enhancements.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="helper.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="GroupMember.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsoleBattle.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="GameActiveSkills.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="GameArtifacts.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="GamePassiveSkills.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="GameBuffs.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="GameDebuffs.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="AdvancedCharacter.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Dungeons.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="DungeonMap.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ActiveSkill.h">
+      <Filter>Файлы заголовков\Skills</Filter>
+    </ClInclude>
+    <ClInclude Include="PassiveSkill.h">
+      <Filter>Файлы заголовков\Skills</Filter>
+    </ClInclude>
+    <ClInclude Include="Enhancement.h">
+      <Filter>Файлы заголовков\Enhancements</Filter>
+    </ClInclude>
+    <ClInclude Include="ProtectionEnhancement.h">
+      <Filter>Файлы заголовков\Enhancements</Filter>
+    </ClInclude>
+    <ClInclude Include="Artifact.h">
+      <Filter>Файлы заголовков\Artifacts</Filter>
+    </ClInclude>
+    <ClInclude Include="Inventory.h">
+      <Filter>Файлы заголовков\Characters</Filter>
+    </ClInclude>
+    <ClInclude Include="Resistances.h">
+      <Filter>Файлы заголовков\Characters</Filter>
+    </ClInclude>
+    <ClInclude Include="Character.h">
+      <Filter>Файлы заголовков\Characters</Filter>
+    </ClInclude>
+    <ClInclude Include="WeaponSlot.h">
+      <Filter>Файлы заголовков\Characters</Filter>
+    </ClInclude>
+    <ClInclude Include="AttackEnhancement.h">
+      <Filter>Файлы заголовков\Enhancements</Filter>
+    </ClInclude>
+    <ClInclude Include="Hero.h">
+      <Filter>Файлы заголовков\Characters\Hero</Filter>
+    </ClInclude>
+    <ClInclude Include="Archer.h">
+      <Filter>Файлы заголовков\Characters\Hero</Filter>
+    </ClInclude>
+    <ClInclude Include="Warrior.h">
+      <Filter>Файлы заголовков\Characters\Hero</Filter>
+    </ClInclude>
+    <ClInclude Include="Mage.h">
+      <Filter>Файлы заголовков\Characters\Hero</Filter>
+    </ClInclude>
+    <ClInclude Include="Heroes.h">
+      <Filter>Файлы заголовков\Characters\Hero</Filter>
+    </ClInclude>
+    <ClInclude Include="Attack.h">
+      <Filter>Файлы заголовков\Attack</Filter>
+    </ClInclude>
+    <ClInclude Include="SplashAttack.h">
+      <Filter>Файлы заголовков\Attack</Filter>
+    </ClInclude>
+    <ClInclude Include="SingleAttack.h">
+      <Filter>Файлы заголовков\Attack</Filter>
+    </ClInclude>
+    <ClInclude Include="Attacks.h">
+      <Filter>Файлы заголовков\Attack</Filter>
+    </ClInclude>
+    <ClInclude Include="GameSkills.h">
+      <Filter>Файлы заголовков\StaticData</Filter>
+    </ClInclude>
+    <ClInclude Include="Enhancements.h">
+      <Filter>Файлы заголовков\Enhancements</Filter>
+    </ClInclude>
+    <ClInclude Include="helper.h">
+      <Filter>Файлы заголовков\functions</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Файлы заголовков\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Group.h">
+      <Filter>Файлы заголовков\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Buff.h">
+      <Filter>Файлы заголовков\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="GroupMember.h">
+      <Filter>Файлы заголовков\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="AttackSkill.h">
+      <Filter>Файлы заголовков\Skills</Filter>
+    </ClInclude>
+    <ClInclude Include="Skills.h">
+      <Filter>Файлы заголовков\Skills</Filter>
+    </ClInclude>
+    <ClInclude Include="ConsoleBattle.h">
+      <Filter>Файлы заголовков\Game\Battle</Filter>
+    </ClInclude>
+    <ClInclude Include="BuffSkill.h">
+      <Filter>Файлы заголовков\Skills</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemies.h">
+      <Filter>Файлы заголовков\Characters</Filter>
+    </ClInclude>
+    <ClInclude Include="GameArtifacts.h">
+      <Filter>Файлы заголовков\StaticData</Filter>
+    </ClInclude>
+    <ClInclude Include="Paladin.h">
+      <Filter>Файлы заголовков\Characters\Allies</Filter>
+    </ClInclude>
+    <ClInclude Include="Skill.h">
+      <Filter>Файлы заголовков\Skills</Filter>
+    </ClInclude>
+    <ClInclude Include="Ally.h">
+      <Filter>Файлы заголовков\Characters\Allies</Filter>
+    </ClInclude>
+    <ClInclude Include="Dungeon.h">
+      <Filter>Файлы заголовков\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="AdvancedCharacter.h">
+      <Filter>Файлы заголовков\Characters</Filter>
+    </ClInclude>
+    <ClInclude Include="Dungeons.h">
+      <Filter>Файлы заголовков\StaticData</Filter>
+    </ClInclude>
+    <ClInclude Include="Priest.h">
+      <Filter>Файлы заголовков\Characters\Allies</Filter>
+    </ClInclude>
+    <ClInclude Include="DungeonMap.h">
+      <Filter>Файлы заголовков\Game</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

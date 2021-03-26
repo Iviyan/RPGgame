@@ -140,7 +140,68 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AdvancedCharacter.cpp" />
+    <ClCompile Include="Attack.cpp" />
+    <ClCompile Include="Character.cpp" />
+    <ClCompile Include="ConsoleBattle.cpp" />
+    <ClCompile Include="DungeonMap.cpp" />
+    <ClCompile Include="Dungeons.cpp" />
+    <ClCompile Include="Enhancements.cpp" />
+    <ClCompile Include="GameArtifacts.cpp" />
+    <ClCompile Include="GameActiveSkills.cpp" />
+    <ClCompile Include="GameBuffs.cpp" />
+    <ClCompile Include="GameDebuffs.cpp" />
+    <ClCompile Include="GamePassiveSkills.cpp" />
+    <ClCompile Include="Group.cpp" />
+    <ClCompile Include="GroupMember.cpp" />
+    <ClCompile Include="helper.cpp" />
+    <ClCompile Include="Hero.cpp" />
+    <ClCompile Include="Inventory.cpp" />
+    <ClCompile Include="Resistances.cpp" />
     <ClCompile Include="RPGgame.cpp" />
+    <ClCompile Include="WeaponSlot.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AdvancedCharacter.h" />
+    <ClInclude Include="Ally.h" />
+    <ClInclude Include="Archer.h" />
+    <ClInclude Include="Artifact.h" />
+    <ClInclude Include="Attack.h" />
+    <ClInclude Include="AttackEnhancement.h" />
+    <ClInclude Include="Attacks.h" />
+    <ClInclude Include="AttackSkill.h" />
+    <ClInclude Include="Buff.h" />
+    <ClInclude Include="BuffSkill.h" />
+    <ClInclude Include="Character.h" />
+    <ClInclude Include="ConsoleBattle.h" />
+    <ClInclude Include="Dungeon.h" />
+    <ClInclude Include="DungeonMap.h" />
+    <ClInclude Include="Dungeons.h" />
+    <ClInclude Include="Enemies.h" />
+    <ClInclude Include="Enhancement.h" />
+    <ClInclude Include="Enhancements.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="GameArtifacts.h" />
+    <ClInclude Include="GameSkills.h" />
+    <ClInclude Include="Group.h" />
+    <ClInclude Include="GroupMember.h" />
+    <ClInclude Include="helper.h" />
+    <ClInclude Include="Hero.h" />
+    <ClInclude Include="Heroes.h" />
+    <ClInclude Include="Inventory.h" />
+    <ClInclude Include="ActiveSkill.h" />
+    <ClInclude Include="Mage.h" />
+    <ClInclude Include="Paladin.h" />
+    <ClInclude Include="PassiveSkill.h" />
+    <ClInclude Include="Priest.h" />
+    <ClInclude Include="ProtectionEnhancement.h" />
+    <ClInclude Include="Resistances.h" />
+    <ClInclude Include="SingleAttack.h" />
+    <ClInclude Include="Skill.h" />
+    <ClInclude Include="Skills.h" />
+    <ClInclude Include="SplashAttack.h" />
+    <ClInclude Include="Warrior.h" />
+    <ClInclude Include="WeaponSlot.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
