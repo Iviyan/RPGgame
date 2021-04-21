@@ -59,7 +59,10 @@ int rnd(int min, int max)
 }
 
 bool chance(int count, int of) {
-	return rnd(1, of) <= count;
+	return rnd(count, of) <= count;
+}
+bool chance(int of) {
+	return rnd(1, of) == 1;
 }
 
 using std::endl;

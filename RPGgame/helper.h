@@ -34,6 +34,11 @@ int rnd(int min, int max);
 /// </summary>
 bool chance(int count, int of);
 
+/// <summary>
+/// Ўанс 1 из ...
+/// </summary>
+bool chance(int of);
+
 void WriteEnhancement(Enhancement& enhancement);
 void WriteEnhancements(vector<Enhancement>& enhancements, int indent = 0);
 void WriteArtifactInfo(Artifact* artifact, int indent = 0);

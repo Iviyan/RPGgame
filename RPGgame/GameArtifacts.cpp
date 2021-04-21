@@ -4,7 +4,6 @@ vector<Artifact*> ArtifactsForSale
 {
 	&IronSword,
 	&IronDagger,
-	&IronSword,
 	&OakStaff,
 	&ShieldOfLight,
 	&Hauberk,
@@ -53,7 +52,7 @@ Artifact SwordOfLight
 	std::string("ћеч света"),
 	ArtifactType::Hand,
 	150, // стоимость продажи
-	vector<Enhancement*> { new AttackEnhancement(AttackEnhancementType::PhysicalAttack, 1.1), new AttackEnhancement(AttackEnhancementType::SacredMagicAttack, 2.0) },
+	vector<Enhancement*> { new AttackEnhancement(AttackEnhancementType::PhysicalAttack, 1.1), new AttackEnhancement(AttackEnhancementType::SacredMagicAttack, 1.3) },
 	vector<ActiveSkill*>({ (ActiveSkill*)&SacredLight })
 );
 
@@ -140,4 +139,16 @@ Artifact LightBoots
 		new Enhancement(EnhancementType::Health, 1.1)
 	},
 	vector<ActiveSkill*>()
+);
+
+Artifact LightingSpear
+(
+	std::string("Ёлектрическое копье"),
+	ArtifactType::TwoHanded,
+	500, // стоимость продажи
+	vector<Enhancement*> {
+	new AttackEnhancement(AttackEnhancementType::PhysicalAttack, 1.5),
+		new AttackEnhancement(AttackEnhancementType::LightningAttack, 1.4)
+},
+vector<ActiveSkill*>({ /*(ActiveSkill*)*/&SpearAttack, &LightningStorm })
 );

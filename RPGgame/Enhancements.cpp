@@ -54,18 +54,6 @@ void Enhancements::AddEnhancements(std::vector<Enhancement*>& enhancements)
 	}
 }
 
-//void Enhancements::EnhanceAttack(Attack* attack)
-//{
-//	attack->power *= GeneralAttack;
-//	switch (attack->damageType) {
-//		case DamageType::SlashAttack: attack->power *= PhysicalAttack * SlashAttack; break;
-//		case DamageType::StabAttack: attack->power *= PhysicalAttack * StabAttack; break;
-//		case DamageType::ColdAttack: attack->power *= MagicalAttack * ColdAttack; break;
-//		case DamageType::FireAttack: attack->power *= MagicalAttack * FireAttack; break;
-//		case DamageType::LightningAttack: attack->power *= MagicalAttack * LightningAttack; break;
-//		case DamageType::SacredMagicAttack: attack->power *= MagicalAttack * SacredMagicAttack; break;
-//	}
-//}
 void Enhancements::EnhanceAttack(Attack* attack)
 {
 	switch (attack->damageType) {

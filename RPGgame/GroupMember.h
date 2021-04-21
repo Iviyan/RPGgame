@@ -7,13 +7,6 @@
 class GroupMember
 {
 public:
-	enum class StepAction {
-		None,
-		Attack,
-		Buff,
-		Debuff
-	};
-
 	struct RecoveringSkill {
 		ActiveSkill* skill;
 		int remainingSteps;

@@ -167,7 +167,7 @@ BattleResult ConsoleBattle::Start()
 
 		cout << "Команда 1:" << endl;
 		i = 0;
-		for (GroupMember* member : group1->members/*g1Victims*/) {
+		for (GroupMember* member : g1Victims) {
 			Character* ch = member->character;
 			WriteCharacterBattleInfo(member);
 		}
@@ -175,7 +175,7 @@ BattleResult ConsoleBattle::Start()
 
 		cout << "Команда 2:" << endl;
 		i = 0;
-		for (GroupMember* member : group2->members/*g2Victims*/) {
+		for (GroupMember* member : g2Victims) {
 			Character* ch = member->character;
 			WriteCharacterBattleInfo(member);
 		}
@@ -207,7 +207,7 @@ BattleResult ConsoleBattle::Start()
 				gold += dead->character->GetGold();
 				if (drop)
 					for (Artifact* art : dead->character->GetArtifactsList()) {
-						if (rnd(1, 5) == 5) artifacts.push_back(art);
+						if (chance(5)) artifacts.push_back(art);
 					}
 			}
 
@@ -242,7 +242,7 @@ BattleResult ConsoleBattle::Start()
 
 			for (GroupMember* dead : group1->deads) {
 				for (Artifact* art : dead->character->GetArtifactsList()) {
-					if (rnd(1, 4) == 4) artifacts.push_back(art);
+					if (chance(4)) artifacts.push_back(art);
 				}
 			}
 

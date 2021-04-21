@@ -17,5 +17,6 @@ extern Artifact IronHelmet;
 extern Artifact LightBoots;
 
 extern Artifact StoneGolemCoreBreastplate;
+extern Artifact LightingSpear;
 
 extern vector<Artifact*> ArtifactsForSale;

@@ -18,9 +18,6 @@ extern PassiveSkill HealthPower; // Mage
 
 extern PassiveSkill WindBarrier;
 
-
-// Enemies
-
 extern AttackSkill Bite;
 extern PassiveSkill Poisoning;
 
@@ -43,3 +40,6 @@ extern PassiveSkill Strengthening;
 
 extern AttackSkill RainOfArrows;
 extern AttackSkill StoneSpears;
+
+extern AttackSkill LightningStorm;
+extern AttackSkill SpearAttack;

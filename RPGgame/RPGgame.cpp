@@ -351,7 +351,7 @@ void GoDungeon(Game* game, Dungeon* dungeon) {
 		}
 		cout << endl;
 
-		int action = ReadInt("(1 - продолжить, 0 - вернуться в город): ");
+		int action = ReadInt("(1 - продолжить, 0 - вернуться в город): ", [](int i, string& msg) { return i >= 0 && i <= 1; }, true);
 		if (action == 0)
 		{
 			cout << "Возвращение в город...\n" << endl;
@@ -577,7 +577,9 @@ void DungeonsShop(Game* game)
 				if (game->CompletedDungeons == 0) {
 					dungeons = { DungeonMap("Первое подземелье", 200, []() { return &FirstDungeon; }) };
 				}
-				// == 1
+				if (game->CompletedDungeons == 0) {
+					dungeons = { DungeonMap("Второе подземелье", 500, []() { return &SecondDungeon; }) };
+				}
 				// == 2
 			}
 

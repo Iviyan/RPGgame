@@ -72,3 +72,21 @@ public:
 			{}
 		) {}
 };
+
+class Apostle : public Character
+{
+public:
+	Apostle(string name, int level) :
+		Character(name, level,
+			250, 50, // health
+			110, 35, // attack
+			50, 20, // protection
+			Resistances(1.2f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f),
+		    80, 30, // magic power
+			200, 50, // mana
+			200 + 100 * level, // gold
+			{  },
+			{ &LightBarrierBuff },
+			Inventory(WeaponSlot(&LightingSpear))
+		) {}
+};

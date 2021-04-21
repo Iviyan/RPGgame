@@ -11,4 +11,5 @@ void Hero::Revive()
     gold = initialGold;
     health = maxHealth;
     mana = maxMana;
+    isDead = false;
 }

@@ -183,3 +183,25 @@ BuffSkill BlessingOfTheGodOfWar
 		return Buff(&Strengthening, 1);
 	}
 );
+
+AttackSkill LightningStorm
+(
+	string("Шторм молний"),
+	string("Наносит 1*MD молнии по 7 противникам"),
+	2,
+	90,
+	[](GroupMember* gm) {
+		return new SplashAttack(gm, DamageType::LightningAttack, gm->character->GetMagicPower(), 90, 7);
+	}
+);
+
+AttackSkill SpearAttack
+(
+	string("Атака копьём"),
+	string("Наносит 1.5*MD пронзающего урона"),
+	0,
+	0,
+	[](GroupMember* gm) {
+		return new SingleAttack(gm, DamageType::StabAttack, gm->character->GetAttack(), 0);
+	}
+);

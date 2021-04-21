@@ -24,6 +24,4 @@ protected:
 	) :
 		Skill(name, description),
 		Type(type), StepsToRestore(stepsToRestore), ManaUsage(manaUsage) {}
-
-	friend class Character;
 };
