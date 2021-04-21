@@ -13,5 +13,7 @@ public:
 
 	int TripsToTheForestCount = 0;
 	int CompletedDungeons = 0;
+
+	void SaveToFile();
 };
 

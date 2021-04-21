@@ -147,6 +147,7 @@
     <ClCompile Include="DungeonMap.cpp" />
     <ClCompile Include="Dungeons.cpp" />
     <ClCompile Include="Enhancements.cpp" />
+    <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameArtifacts.cpp" />
     <ClCompile Include="GameActiveSkills.cpp" />
     <ClCompile Include="GameBuffs.cpp" />
@@ -190,6 +191,7 @@
     <ClInclude Include="Heroes.h" />
     <ClInclude Include="Inventory.h" />
     <ClInclude Include="ActiveSkill.h" />
+    <ClInclude Include="lib\json.hpp" />
     <ClInclude Include="Mage.h" />
     <ClInclude Include="Paladin.h" />
     <ClInclude Include="PassiveSkill.h" />
