@@ -9,6 +9,8 @@
 #include "Buff.h"
 #include <vector>
 
+#include "rapidJson.h"
+
 using std::string;
 using std::vector;
 
@@ -68,6 +70,8 @@ public:
 		vector<PassiveSkill*> passiveSkills = {},
 		Inventory inventory = {}
 	);
+
+	virtual void ExportInitialData(Value& j, MemoryPoolAllocator<>& allocator);
 
 protected:
 	int level = 1;

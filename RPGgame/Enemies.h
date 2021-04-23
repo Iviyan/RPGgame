@@ -17,6 +17,12 @@ public:
 			34 + 5 * level, // gold
 			vector<ActiveSkill*>({ &Bite })
 		) {}
+
+	void ExportInitialData(Value& j, MemoryPoolAllocator<>& allocator)
+	{
+		j.AddMember("Type", "Zombie", allocator);
+		Character::ExportInitialData(j, allocator);
+	}
 };
 
 
@@ -36,6 +42,12 @@ public:
 			{},
 			Inventory(WeaponSlot(&IronSword))
 		) {}
+
+	void ExportInitialData(Value& j, MemoryPoolAllocator<>& allocator)
+	{
+		j.AddMember("Type", "Skeleton", allocator);
+		Character::ExportInitialData(j, allocator);
+	}
 };
 
 class Goblin : public Character
@@ -54,6 +66,12 @@ public:
 			{},
 			Inventory(WeaponSlot(&IronDagger))
 		) {}
+
+	void ExportInitialData(Value& j, MemoryPoolAllocator<>& allocator)
+	{
+		j.AddMember("Type", "Goblin", allocator);
+		Character::ExportInitialData(j, allocator);
+	}
 };
 
 class StoneGolem : public Character
@@ -71,6 +89,12 @@ public:
 			{ &FistPunch, &StoneSpears},
 			{}
 		) {}
+
+	void ExportInitialData(Value& j, MemoryPoolAllocator<>& allocator)
+	{
+		j.AddMember("Type", "StoneGolem", allocator);
+		Character::ExportInitialData(j, allocator);
+	}
 };
 
 class Apostle : public Character
@@ -89,4 +113,10 @@ public:
 			{ &LightBarrierBuff },
 			Inventory(WeaponSlot(&LightingSpear))
 		) {}
+
+	void ExportInitialData(Value& j, MemoryPoolAllocator<>& allocator)
+	{
+		j.AddMember("Type", "Apostle", allocator);
+		Character::ExportInitialData(j, allocator);
+	}
 };

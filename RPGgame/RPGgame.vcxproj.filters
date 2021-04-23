@@ -111,6 +111,9 @@
     <ClCompile Include="Game.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="Artifact.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ActiveSkill.h">
@@ -233,7 +236,7 @@
     <ClInclude Include="DungeonMap.h">
       <Filter>Файлы заголовков\Game</Filter>
     </ClInclude>
-    <ClInclude Include="lib\json.hpp">
+    <ClInclude Include="rapidJson.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

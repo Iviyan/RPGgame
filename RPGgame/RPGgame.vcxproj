@@ -141,6 +141,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AdvancedCharacter.cpp" />
+    <ClCompile Include="Artifact.cpp" />
     <ClCompile Include="Attack.cpp" />
     <ClCompile Include="Character.cpp" />
     <ClCompile Include="ConsoleBattle.cpp" />
@@ -191,12 +192,12 @@
     <ClInclude Include="Heroes.h" />
     <ClInclude Include="Inventory.h" />
     <ClInclude Include="ActiveSkill.h" />
-    <ClInclude Include="lib\json.hpp" />
     <ClInclude Include="Mage.h" />
     <ClInclude Include="Paladin.h" />
     <ClInclude Include="PassiveSkill.h" />
     <ClInclude Include="Priest.h" />
     <ClInclude Include="ProtectionEnhancement.h" />
+    <ClInclude Include="rapidJson.h" />
     <ClInclude Include="Resistances.h" />
     <ClInclude Include="SingleAttack.h" />
     <ClInclude Include="Skill.h" />

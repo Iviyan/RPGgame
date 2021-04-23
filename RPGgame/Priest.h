@@ -18,4 +18,10 @@ public:
 			{ &BlessingOfTheGodOfWar }, // skills list
 			Inventory()
 		) {}
+
+	void ExportInitialData(Value& j, MemoryPoolAllocator<>& allocator)
+	{
+		j.AddMember("Type", "Priest", allocator);
+		Ally::ExportInitialData(j, allocator);
+	}
 };

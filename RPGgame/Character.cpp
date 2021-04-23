@@ -92,12 +92,40 @@ Character::Character(
 	magicPower = ownMagicPower;
 	mana = maxMana = maxOwnMana;
 
-	
+
 
 	UpdateArtifactDependentProperties();
 
 	auto f = [this]() { this->UpdateArtifactDependentProperties(); };
 	this->inventory.OnUpdate = f;
+}
+
+void Character::ExportInitialData(Value& j, MemoryPoolAllocator<>& allocator)
+{
+	j.AddMember("Name", Name, allocator);
+	j.AddMember("Level", level, allocator);
+	j.AddMember("Health", health, allocator);
+	j.AddMember("Mana", mana, allocator);
+
+	Value ji(Type::kObjectType);
+	if (inventory.GetMainWeapon() != nullptr) ji.AddMember("MainWeapon", inventory.GetMainWeapon()->Name, allocator);
+	if (inventory.GetAdditionalWeapon() != nullptr) ji.AddMember("AdditionalWeapon", inventory.GetAdditionalWeapon()->Name, allocator);
+	if (inventory.GetHelmet() != nullptr) ji.AddMember("Helmet", inventory.GetHelmet()->Name, allocator);
+	if (inventory.GetBreastplate() != nullptr) ji.AddMember("Breastplate", inventory.GetBreastplate()->Name, allocator);
+	if (inventory.GetBoots() != nullptr) ji.AddMember("Boots", inventory.GetBoots()->Name, allocator);
+	Value jii(Type::kArrayType);
+	for (auto item : inventory.GetItems())
+		jii.PushBack(Value{}.SetString(item->Name.c_str(), item->Name.length(), allocator), allocator);
+	ji.AddMember("Items", jii, allocator);
+
+	j.AddMember("Inventory", ji, allocator);
+
+	Value jskills(Type::kArrayType);
+	for (auto skill : activeSkills)
+		jskills.PushBack(Value{}.SetString(skill->Name.c_str(), skill->Name.length(), allocator), allocator);
+	for (auto skill : passiveSkills)
+		jskills.PushBack(Value{}.SetString(skill->Name.c_str(), skill->Name.length(), allocator), allocator);
+	j.AddMember("Skills", jskills, allocator);
 }
 
 bool Character::ReduceHealth(int value)

@@ -1,12 +1,19 @@
 #pragma once
 
 #include <functional>
-#include <Windows.h>
 #include "Skill.h"
 #include "Attacks.h"
 #include "Enhancements.h"
 
 using std::function;
+#define ENUM_FLAG_OPERATORS(T)                                                                                                                                            \
+    inline T operator~ (T a) { return static_cast<T>( ~static_cast<std::underlying_type<T>::type>(a) ); }                                                                       \
+    inline T operator| (T a, T b) { return static_cast<T>( static_cast<std::underlying_type<T>::type>(a) | static_cast<std::underlying_type<T>::type>(b) ); }                   \
+    inline T operator& (T a, T b) { return static_cast<T>( static_cast<std::underlying_type<T>::type>(a) & static_cast<std::underlying_type<T>::type>(b) ); }                   \
+    inline T operator^ (T a, T b) { return static_cast<T>( static_cast<std::underlying_type<T>::type>(a) ^ static_cast<std::underlying_type<T>::type>(b) ); }                   \
+    inline T& operator|= (T& a, T b) { return reinterpret_cast<T&>( reinterpret_cast<std::underlying_type<T>::type&>(a) |= static_cast<std::underlying_type<T>::type>(b) ); }   \
+    inline T& operator&= (T& a, T b) { return reinterpret_cast<T&>( reinterpret_cast<std::underlying_type<T>::type&>(a) &= static_cast<std::underlying_type<T>::type>(b) ); }   \
+    inline T& operator^= (T& a, T b) { return reinterpret_cast<T&>( reinterpret_cast<std::underlying_type<T>::type&>(a) ^= static_cast<std::underlying_type<T>::type>(b) ); }
 
 enum class PassiveSkillAbilities {
 	EditingCreatedAttack = 1 << 0,
@@ -15,7 +22,7 @@ enum class PassiveSkillAbilities {
 	OnReceivedByEnemyAttack = 1 << 3,
 	StepTriggering = 1 << 4,
 };
-DEFINE_ENUM_FLAG_OPERATORS(PassiveSkillAbilities)
+ENUM_FLAG_OPERATORS(PassiveSkillAbilities)
 
 class Character;
 class GroupMember;

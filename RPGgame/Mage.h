@@ -18,5 +18,11 @@ public:
 			{ &WindBarrier }, // skills list
 			Inventory(WeaponSlot(&OakStaff))
 		) {}
+
+	void ExportInitialData(Value& j, MemoryPoolAllocator<>& allocator)
+	{
+		j.AddMember("Type", "Mage", allocator);
+		Hero::ExportInitialData(j, allocator);
+	}
 };
 

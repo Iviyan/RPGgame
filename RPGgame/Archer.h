@@ -18,5 +18,10 @@ public:
 			{ &RainOfArrows }, // skills list
 			Inventory(WeaponSlot(&WoodenBow))
 			) {}
-};
 
+	void ExportInitialData(Value& j, MemoryPoolAllocator<>& allocator)
+	{
+		j.AddMember("Type", "Archer", allocator);
+		Hero::ExportInitialData(j, allocator);
+	}
+};

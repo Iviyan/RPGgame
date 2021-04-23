@@ -18,4 +18,10 @@ public:
 			{}, // skills list
 			Inventory(WeaponSlot(&SwordOfLight, &ShieldOfLight))
 		) {}
+
+	void ExportInitialData(Value& j, MemoryPoolAllocator<>& allocator)
+	{
+		j.AddMember("Type", "Paladin", allocator);
+		Ally::ExportInitialData(j, allocator);
+	}
 };

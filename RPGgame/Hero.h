@@ -46,6 +46,8 @@ public:
 	virtual void Die();
 	void Revive();
 
+	void ExportInitialData(Value& j, MemoryPoolAllocator<>& allocator);
+
 protected:
 	int deathsCount = 0;
 	CharacterType type;

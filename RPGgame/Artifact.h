@@ -21,10 +21,7 @@ public:
 	vector<Enhancement*> Enhancements;
 	vector<ActiveSkill*> ActiveSkills;
 
-	Artifact(string name, ArtifactType type, int cost, vector<Enhancement*> enhancements, vector<ActiveSkill*> activeSkills = {}) :
-		Name(name), Type(type), Cost(cost), Enhancements(enhancements), ActiveSkills(activeSkills) {
-		Artifacts.emplace(name, this);
-	}
+	Artifact(string name, ArtifactType type, int cost, vector<Enhancement*> enhancements, vector<ActiveSkill*> activeSkills = {});
 
 	static std::map<string, Artifact*> Artifacts;
 };

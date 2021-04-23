@@ -18,5 +18,11 @@ public:
 			{ &BattleCry }, // skills list
 			Inventory(WeaponSlot(&IronSword))
 		) {}
+
+	void ExportInitialData(Value& j, MemoryPoolAllocator<>& allocator)
+	{
+		j.AddMember("Type", "Warrior", allocator);
+		Hero::ExportInitialData(j, allocator);
+	}
 };
 

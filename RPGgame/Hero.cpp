@@ -13,3 +13,9 @@ void Hero::Revive()
     mana = maxMana;
     isDead = false;
 }
+
+void Hero::ExportInitialData(Value& j, MemoryPoolAllocator<>& allocator)
+{
+    Character::ExportInitialData(j, allocator);
+    j.AddMember("Gold", gold, allocator);
+}

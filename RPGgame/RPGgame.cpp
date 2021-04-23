@@ -1,4 +1,4 @@
-﻿#include <Windows.h>
+﻿
 #include <iostream>
 #include "Heroes.h"
 #include "helper.h"
@@ -9,6 +9,7 @@
 #include "Enemies.h"
 #include "Dungeons.h"
 #include "DungeonMap.h"
+#include <Windows.h>
 
 using namespace std;
 
@@ -19,6 +20,8 @@ void Shop(Game* game);
 void MercenaryShop(Game* game);
 void ArtifactsShop(Game* game);
 void DungeonsShop(Game* game);
+
+const string gameDataFile = "save.json";
 
 int main()
 {
@@ -117,8 +120,9 @@ int main()
 			"6. Информация о ГГ\n"
 			"7. Подробная информация о команде\n"
 			"8. Состояние команды\n"
+			"9. Сохранить игру\n"
 			"> ",
-			[](int i, string& msg) { return i >= 1 && i <= 8; },
+			[](int i, string& msg) { return i >= 1 && i <= 9; },
 			true
 		);
 
@@ -224,6 +228,13 @@ int main()
 					WriteCharacterStats(member->character);
 				}
 				cout << endl;
+			}
+			break;
+
+			case 9:
+			{
+				game.SaveToFile(gameDataFile);
+				cout << "Данные игры сохранены в " << gameDataFile << '\n' << endl;
 			}
 			break;
 		}
