@@ -26,5 +26,19 @@ public:
 
 	Dungeon(string name, string description, vector<Group*> floors, Reward rewards = {}) :
 		Name(name), Description(description), Floors(floors), Rewards(rewards) {}
+
+	virtual void ExportInitialData(Value& j, MemoryPoolAllocator<>& allocator) {
+		j.AddMember("Name", Name, allocator);
+		Value jfloors(Type::kArrayType);
+		for (Group* group : Floors) {
+			Value jgroup(Type::kObjectType);
+			if (group == nullptr)
+				jgroup.SetNull();
+			else
+				group->ExportData(jgroup, allocator);
+			jfloors.PushBack(jgroup, allocator);
+		}
+		j.AddMember("Floors", jfloors, allocator);
+	}
 };
 

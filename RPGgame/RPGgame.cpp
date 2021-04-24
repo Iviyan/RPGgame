@@ -588,7 +588,7 @@ void DungeonsShop(Game* game)
 				if (game->CompletedDungeons == 0) {
 					dungeons = { DungeonMap("Первое подземелье", 200, []() { return &FirstDungeon; }) };
 				}
-				if (game->CompletedDungeons == 0) {
+				if (game->CompletedDungeons == 1) {
 					dungeons = { DungeonMap("Второе подземелье", 500, []() { return &SecondDungeon; }) };
 				}
 				// == 2

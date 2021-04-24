@@ -34,5 +34,6 @@ public:
 	Group(string name, vector<Character*> characters);
 	
 	~Group();
-};
 
+	void ExportData(Value& jgroup, MemoryPoolAllocator<>& allocator);
+};

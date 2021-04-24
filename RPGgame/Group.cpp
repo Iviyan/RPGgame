@@ -179,3 +179,15 @@ Group::~Group()
 		delete gm;
 	}
 }
+
+void Group::ExportData(Value& jgroup, MemoryPoolAllocator<>& allocator)
+{
+	jgroup.AddMember("Name", Name, allocator);
+	Value jgmembers(Type::kArrayType);
+	for (GroupMember* member : members) {
+		Value jmember(Type::kObjectType);
+		member->character->ExportInitialData(jmember, allocator);
+		jgmembers.PushBack(jmember, allocator);
+	}
+	jgroup.AddMember("Members", jgmembers, allocator);
+}
